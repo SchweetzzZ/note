@@ -1,0 +1,17 @@
+import type {Config} from "drizzle-kit";
+
+export default {
+    schema:"./src/db/schemas",
+    out:"./src/db/schemas",
+    dialect: "postgresql",
+    dbCredentials: {
+        host: process.env.PG_HOST as string,
+        port: Number(process.env.PG_PORT),
+        user: process.env.PG_USER as string,
+        password: process.env.PG_PASSWORD as string,
+        database: process.env.PG_DATABASE as string
+    },
+    verbose: true,
+    strict: true,
+} satisfies Config
+    
