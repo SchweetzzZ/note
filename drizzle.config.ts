@@ -9,7 +9,8 @@ export default {
         port: Number(process.env.PG_PORT),
         user: process.env.PG_USER as string,
         password: process.env.PG_PASSWORD as string,
-        database: process.env.PG_DATABASE as string
+        database: process.env.PG_DATABASE as string,
+        ssl: false
     },
     verbose: true,
     strict: true,
